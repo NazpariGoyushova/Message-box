@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Users/A/OneDrive/%C4%B0%C5%9F%20masas%C4%B1/programmer/index.html.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Document1_files/style.css">
+  <link rel="stylesheet" href="./Document1_files/all.min.css">
+  <link rel="stylesheet" href="./Document1_files/fontawesome.css">
+  <link rel="stylesheet" href="./Document1_files/bootstrap.css">
+
+
+</head>
+
+<body>
+<div class="container">
+  <div class="sec">
+  <h4>A Message You Would Like To Pass</h4>
+  <form id="forum">
+   <input type="text" id="message" class="box"> 
+   <input type="submit" id="submitBtn" class="button"> 
+  </form>
+
+  <h5 class="feedback">Please enter a a value to pass</h5>
+  <h4>Last message delievered</h4>
+  <h4 class="message-content"></h4>
+</div>
+</div>
+
+
+    <script>
+  
+  
+  const form = document.querySelector("#forum");
+    form.addEventListener('click',function(e){
+      e.preventDefault()
+     
+      const message=document.querySelector("#message");
+     const submit=document.querySelector("#submitBtn");
+     const content=document.querySelector(".message-content");
+     const feedback=document.querySelector(".feedback");
+     
+   
+   
+       if(message.value === ""){
+      feedback.classList.add("active");
+      setTimeout( function() {
+        feedback.classList.remove("active");
+      }, 4000);
+     
+     }
+     else{
+       content.textContent=message.value;
+       message.value="";
+     }})
+ 
+   
+   </script>
+  
+ 
+
+
+ 
+
+
+
+
+</body></html>
